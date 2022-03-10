@@ -1,5 +1,8 @@
 package com.subham.service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,4 +23,12 @@ public class OrderDetailsServiceImpl implements OrderDetailsService {
 		return "Order saved...";
 	}
 
+	@Override
+	public List<OrderDetails> getOrder(){
+		List<OrderDetails> data = new ArrayList<>();
+		
+		data = orderDetailsRepository.findAll();
+		
+		return data;
+	}
 }

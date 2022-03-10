@@ -1,5 +1,7 @@
 package com.subham.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,8 +22,8 @@ public class WeekendController {
 
 
 	@GetMapping("/getdata")
-	public String getData() {
-		return "Hello";
+	public List<OrderDetails> getData() {
+		return orderDetailsService.getOrder();
 	}
 
 	@PostMapping("/saveorder")
