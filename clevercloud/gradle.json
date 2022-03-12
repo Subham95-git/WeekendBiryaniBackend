@@ -1,5 +1,5 @@
 {
   "deploy": {
-    "goal": "grails:run"
+    "goal": "-Dtest.active=false -Dexec.mainClass=\"com.subham\" assembly:jar-with-dependencies exec:java"
   }
 }
